@@ -313,21 +313,34 @@ private:
     int provincia;
     bool activo;
 public:
-    void Cargar(){
-        cin>>numeroProveedor;
-        cargarCadena(nombre,29);
-        cargarCadena(telefono,29);
-        cargarCadena(direccion,29);
-        cin>>provincia;
-        activo=true;
+    void Cargar() {
+        cout << "Ingrese el número de proveedor: ";
+        cin >> numeroProveedor;
+
+        cout << "Ingrese el nombre del proveedor: ";
+        cargarCadena(nombre, 29);
+
+        cout << "Ingrese el teléfono del proveedor: ";
+        cargarCadena(telefono, 29);
+
+        cout << "Ingrese la dirección del proveedor: ";
+        cargarCadena(direccion, 29);
+
+        cout << "Ingrese la provincia (1 a 24): ";
+        cin >> provincia;
+
+        activo = true; // Considerar que el proveedor está activo por defecto
     }
-    void Mostrar(){
-        cout<<numeroProveedor<<endl;
-        cout<<nombre<<endl;
-        cout<<telefono<<endl;
-        cout<<direccion<<endl;
-        cout<<provincia<<endl;
+
+    void Mostrar() {
+        cout << "Número de Proveedor: " << numeroProveedor << endl;
+        cout << "Nombre del Proveedor: " << nombre << endl;
+        cout << "Teléfono del Proveedor: " << telefono << endl;
+        cout << "Dirección del Proveedor: " << direccion << endl;
+        cout << "Provincia: " << provincia << endl;
+        cout << "Estado: " << (activo ? "Activo" : "Inactivo") << endl; // Muestra si está activo o no
     }
+
 
     int getNumeroProveedor(){return numeroProveedor;}
     int getProvincia(){return provincia;}
