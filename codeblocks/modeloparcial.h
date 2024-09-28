@@ -1,7 +1,10 @@
-///Ejercicio: Parcial 2 de Programaci髇 II
+///Ejercicio: Parcial 2 de Programaci贸n II
 ///Autor:DEK
 ///Fecha:13/07/2022
 ///Comentario:
+#include <iostream>
+#include <string.h>
+using namespace std;
 
 void cargarCadena(char *pal, int tam){
     int i;
@@ -205,27 +208,45 @@ private:
     Fecha fechaCompra;
     bool activo;
 public:
-    void Cargar(){
-        cin>>numeroCompra;
-        cin>>numeroProveedor;
-        cin>>codigoMaterial;
-        cargarCadena(codigoObra,4);
-        cin>>cantidad;
-        cin>>importe;
+    void Cargar() {
+        cout << "Ingrese el n煤mero de compra: ";
+        cin >> numeroCompra;
+
+        cout << "Ingrese el n煤mero de proveedor: ";
+        cin >> numeroProveedor;
+
+        cout << "Ingrese el c贸digo de material: ";
+        cin >> codigoMaterial;
+
+        cout << "Ingrese el c贸digo de obra (4 caracteres): ";
+        cargarCadena(codigoObra, 4);
+
+        cout << "Ingrese la cantidad: ";
+        cin >> cantidad;
+
+        cout << "Ingrese el importe: ";
+        cin >> importe;
+
+        cout << "Ingrese la fecha de compra:" << endl;
         fechaCompra.Cargar();
-        activo=true;
+
+        activo = true;
+        cout << "Registro cargado exitosamente." << endl;
     }
 
-    void Mostrar(){
-        cout<<numeroCompra<<endl;
-        cout<<numeroProveedor<<endl;
-        cout<<codigoMaterial<<endl;
-        cout<<codigoObra<<endl;
-        cout<<cantidad<<endl;
-        cout<<importe<<endl;
+
+    void Mostrar() {
+        cout << "N煤mero de Compra: " << numeroCompra << endl;
+        cout << "N煤mero de Proveedor: " << numeroProveedor << endl;
+        cout << "C贸digo de Material: " << codigoMaterial << endl;
+        cout << "C贸digo de Obra: " << codigoObra << endl;
+        cout << "Cantidad: " << cantidad << endl;
+        cout << "Importe: " << importe << endl;
+        cout << "Fecha de Compra: ";
         fechaCompra.Mostrar();
-        cout<<endl;
+        cout << endl;
     }
+
     int getNumeroCompra(){return numeroCompra;}
     int getNumeroproveedor(){return numeroProveedor;}
     int getCodigoMaterial(){return codigoMaterial;}
