@@ -131,21 +131,35 @@ private:
     float pu;
     bool activo;
 public:
-    void Cargar(){
-        cin>>codigoMaterial;
-        cargarCadena(nombre,29);
-        cargarCadena(marca,29);
-        cin>>tipo;
-        cin>>pu;
-        activo=true;
+    void Cargar() {
+        cout << "Ingrese el código del material: ";
+        cin >> codigoMaterial;
+
+        cout << "Ingrese el nombre del material: ";
+        cargarCadena(nombre, 29);
+
+        cout << "Ingrese la marca del material: ";
+        cargarCadena(marca, 29);
+
+        cout << "Ingrese el tipo del material: ";
+        cin >> tipo;
+
+        cout << "Ingrese el precio unitario (pu): ";
+        cin >> pu;
+
+        activo = true;
+        cout << "Material cargado exitosamente!" << endl; // Mensaje de confirmación
     }
-    void Mostrar(){
-        cout<<codigoMaterial<<endl;
-        cout<<nombre<<endl;
-        cout<<marca<<endl;
-        cout<<tipo<<endl;
-        cout<<pu<<endl;
+
+    void Mostrar() {
+        cout << "Código del Material: " << codigoMaterial << endl;
+        cout << "Nombre del Material: " << nombre << endl;
+        cout << "Marca del Material: " << marca << endl;
+        cout << "Tipo de Material: " << tipo << endl;
+        cout << "Precio Unitario: " << pu << endl;
+        cout << "-----------------------------------" << endl; // Línea divisoria para mejor legibilidad
     }
+
     int getCodigoMaterial(){return codigoMaterial;}
     int getTipo(){return tipo;}
     const char *getNombre(){return nombre;}
