@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1727567796 source:c:\users\keys2win\parcial-programacion-ii\codeblocks\main.cpp
+	<iostream>
+	"modeloparcial.h"
+
+1727567839 c:\users\keys2win\parcial-programacion-ii\codeblocks\modeloparcial.h
+	<iostream>
+	<string.h>
+
