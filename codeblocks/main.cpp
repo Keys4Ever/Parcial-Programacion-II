@@ -1,11 +1,12 @@
 #include <iostream>
+#include <cstring>
+using namespace std;
 #include "modeloparcial.h"
 void menu();
 void handleOption(int);
-using namespace std;
 
 /**
-Generar un archivo con las compras realizadas este año. Cada registro debe tener el número de compra, el número de proveedor y el importe
+Generar un archivo con las compras realizadas este aÃ±o. Cada registro debe tener el nÃºmero de compra, el nÃºmero de proveedor y el importe
 */
 
 class CompraRealizada{
@@ -134,7 +135,7 @@ int provinciaConMasProveedoresConCompras() {
 		}
     }
 
-    // Encontrar la provincia con más proveedores
+    // Encontrar la provincia con mÃ¡s proveedores
     int provinciaConMasProveedores = 0;
     int maxProveedores = 0;
 
@@ -163,7 +164,7 @@ int provinciaConMasProveedores() {
 		}
     }
 
-    // Encontrar la provincia con más proveedores
+    // Encontrar la provincia con mÃ¡s proveedores
     int provinciaConMasProveedores = 0;
     int maxProveedores = 0;
 
